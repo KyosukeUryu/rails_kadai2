@@ -24,6 +24,11 @@ class UsersController < ApplicationController
   end
 
   def update
+    if @user.update(user_params)
+      redirect_to root_path, notice: 'ユーザ情報更新完了！'
+    else
+      render :edit
+    end
   end
 
   def destroy
