@@ -21,20 +21,23 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+            <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
           </nav>
           <div id="navbar-menu" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="">top</a></li>
-              <li><a href="">menu1</a></li>
-              <li><a href="">menu2</a></li>
+            <ul class="nav navbar-nav navbar-right">
+              <% if logged_in? %>
+                <li><a href="#">新規投稿</a></li>
+                <li class="dropdown"><%= link_to 'ログアウト', session_path(current_user.id), method: :delete, data: { confirm: 'ログアウトしますか？'} %></li>
+              <% else %>
+                <li><%= link_to 'ログイン', new_session_path %></li>
+                <li><%= link_to '新規登録', new_user_path %></li>
+              <% end %>
             </ul>
           </div>
         </div>
       </nav>
     </header>
     <section class="main_contents">
-      <p><%= notice %></p>
       <% flash.each do |key, value| %>
         <%= content_tag(:div, value, class: "#{key}") %>
       <% end %>
