@@ -35,6 +35,9 @@
     </header>
     <section class="main_contents">
       <p><%= notice %></p>
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
       <%= yield %>
     </section>
     <footer>

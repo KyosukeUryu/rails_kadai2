@@ -6,4 +6,6 @@ Rails.application.routes.draw do
       get :tops
     end
   end
+
+  resources :sessions, only: %i[new create destroy]
 end
