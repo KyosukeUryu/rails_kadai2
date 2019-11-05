@@ -11,7 +11,27 @@
 
   <body>
     <header>
-      
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <nav class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+              <span class="sr-only">顔本</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+          </nav>
+          <div id="navbar-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="">top</a></li>
+              <li><a href="">menu1</a></li>
+              <li><a href="">menu2</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <%= yield %>
