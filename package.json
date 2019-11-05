@@ -1,5 +1,7 @@
 {
   "name": "rails_kadai2",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }
