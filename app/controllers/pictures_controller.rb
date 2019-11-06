@@ -15,7 +15,7 @@ class PicturesController < ApplicationController
       render 'new'
     else
       if @picture.save
-        redirect_to user_path(current_user.id), notice: '投稿しました！'
+        redirect_to pictures_path, notice: '投稿しました！'
       else
         render :new
       end
@@ -30,7 +30,7 @@ class PicturesController < ApplicationController
 
   def update
     if @picture.update(picture_params)
-      redirect_to user_path(current_user.id), notice: '投稿内容を編集しました！'
+      redirect_to picture_path(@picture.id), notice: '投稿内容を編集しました！'
     else
       render :new
     end
