@@ -5,20 +5,20 @@ class PicturesController < ApplicationController
   end
 
   def new
-    if params[:back]
-      @picture = Picture.new(picture_params)
-    else
-      @picture = Picture.new
-    end
+    @picture = Picture.new
   end
 
   def create
     @picture = Picture.new(picture_params)
     @picture.user_id = current_user.id
-    if @picture.save
-      redirect_to user_path(current_user.id), notice: '投稿しました！'
+    if params[:back]
+      render 'new'
     else
-      render :new
+      if @picture.save
+        redirect_to user_path(current_user.id), notice: '投稿しました！'
+      else
+        render :new
+      end
     end
   end
 
