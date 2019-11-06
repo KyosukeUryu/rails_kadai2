@@ -33,6 +33,8 @@ class PicturesController < ApplicationController
   end
 
   def destroy
+    @picture.destroy
+    redirect_to user_path(current_user.id), notice: '投稿を削除しました！'
   end
 
   def confirm
