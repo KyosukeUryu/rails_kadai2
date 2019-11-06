@@ -44,12 +44,15 @@
         </div>
       </nav>
     </header>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value.html_safe %>
+      </div>
+    <% end %>
     <div class="container">
       <div class="row">
         <section class="main_contents col-sm-8">
-          <% flash.each do |key, value| %>
-            <%= content_tag(:div, value, class: "#{key}") %>
-          <% end %>
+
 
           <%= yield %>
 
