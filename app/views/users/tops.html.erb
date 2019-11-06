@@ -1,0 +1,7 @@
+<h2><strong>これはFacebookもどき！</strong></h2>
+<h3>今すぐ投稿しよう!</h3>
+<% if logged_in? %>
+  <%= link_to '新規投稿', new_picture_path, class: "btn btn-success top-btn" %>
+  <%= link_to 'みんなの投稿を確認', pictures_path, class: "btn btn-info top-btn" %>
+  <%= link_to 'マイページへ', user_path(current_user.id), class: "btn btn-primary top-btn" %>
+<% end %>

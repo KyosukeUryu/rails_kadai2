@@ -3,7 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .html {
-  position: relative;
   min-height: 100%;
 }
 
@@ -20,10 +19,17 @@ footer p {
 }
 
 .main_contents {
-  position: absolute;
   padding: 80px;
 }
 
 body {
   height: 100%;
+}
+
+aside {
+  padding-top: 80px;
+}
+
+aside h3 {
+  font-size: 2rem;
 }
