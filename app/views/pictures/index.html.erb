@@ -5,6 +5,7 @@
       <%= image_tag pic.image.url %>
       <p>内容：<%= pic.content %></p>
       <p>投稿者：<%= pic.user.name %></p>
+      <%= link_to '詳しくチェック', picture_path(pic.id) %>
     </div>
   <% end %>
 </div>
