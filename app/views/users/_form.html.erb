@@ -7,22 +7,24 @@
     <% end %>
     </ul>
   <% end %>
-  <div class="name_field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div class="email_field">
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-  </div>
-  <div class="password_field">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="password_confirmation_field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </div>
+  <ul class="user_form">
+    <li class="name_field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </li>
+    <li class="email_field">
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </li>
+    <li class="password_field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </li>
+    <li class="password_confirmation_field">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </li>
+  </ul>
 
   <%= f.submit '登録する' %>
 <% end %>
