@@ -60,7 +60,9 @@
         </section>
         <aside class="col-sm-offset-2 col-sm-2">
           <% if logged_in? %>
-            <p>ログイン中の何か</p>
+            <%= image_tag 'profile.jpg', size: '200x200' %>
+            <p>いつもありがとうございます！</p><br>
+            <p>お気に入りの画像を投稿しよう！</p>
           <% else %>
             <h3>ログインがまだ！<br>今すぐ<%= link_to 'ログイン', new_session_path %>！</h3>
           <% end %>
