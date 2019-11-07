@@ -11,19 +11,51 @@ footer {
   position: fixed;
   bottom: 0;
   text-align: center;
-  background-color: #ddffff;
+  background-color: lightsteelblue;
+  height: 40px;
+  border: solid 1px skyblue;
 }
 
 footer p {
-  color: #cccccc;
+  color: floralwhite;
+  padding: 10px;
+}
+
+.navbar-default {
+  background-color: lightsteelblue;
+  border-color: skyblue;
+}
+
+.navbar-default .navbar-brand {
+  color: floralwhite;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: floralwhite;
+}
+
+.row {
+  height: 100%;
+}
+
+.main-container {
+  height: 100%;
 }
 
 .main_contents {
-  padding: 80px;
+  padding: 80px 0;
+  border-right: solid thin lightgray;
+  text-align: center;
+  background-color: whitesmoke;
+  height: 100%;
 }
 
 body {
-  height: 100%;
+  height: 970px;
+}
+
+.alert {
+  margin-bottom: 0;
 }
 
 aside {
