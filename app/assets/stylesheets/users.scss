@@ -34,6 +34,10 @@ footer p {
   color: floralwhite;
 }
 
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+  background-color: lightsteelblue;
+}
+
 .row {
   height: 100%;
 }
