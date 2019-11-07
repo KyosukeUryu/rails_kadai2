@@ -1,1 +1,12 @@
 <h2><%= @user.name %>さんのページ</h2>
+<% if @user.id == current_user.id %>
+  <%= link_to 'ユーザ情報編集画面へ', edit_user_path(@user.id), class: 'btn btn-warning' %>
+<% end %>
+
+<h3><%= @user.name %>さんの投稿一覧</h3>
+<% @user.pictures.each do |pic| %>
+  <div class="users_picture">
+    <%= image_tag pic.image.url %>
+    <p>内容：<%= pic.content %></p>
+  </div>
+<% end %>
