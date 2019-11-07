@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.html {
-  min-height: 100%;
-}
-
 footer {
   width: 100%;
   position: fixed;
@@ -39,23 +35,23 @@ footer p {
 }
 
 .row {
-  height: 100%;
+  height: 950px;
 }
 
 .main-container {
-  height: 100%;
+  height: auto;
 }
 
 .main_contents {
   padding: 80px 0;
   border-right: solid thin lightgray;
   text-align: center;
+  min-height: 950px;
   background-color: whitesmoke;
-  height: 100%;
 }
 
 body {
-  height: 970px;
+  height: 100%;
 }
 
 .alert {

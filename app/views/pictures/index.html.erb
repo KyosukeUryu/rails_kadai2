@@ -1,7 +1,10 @@
 <h2>みんなの投稿一覧</h2>
-
-<% @pictures.each do |pic| %>
-  <%= image_tag pic.image.url %>
-  <p>内容：<%= pic.content %></p>
-  <p>投稿者：<%= pic.user.name %></p>
-<% end %>
+<div class="pictures_index">
+  <% @pictures.each do |pic| %>
+    <div class="each_picture">
+      <%= image_tag pic.image.url %>
+      <p>内容：<%= pic.content %></p>
+      <p>投稿者：<%= pic.user.name %></p>
+    </div>
+  <% end %>
+</div>

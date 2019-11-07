@@ -1,3 +1,8 @@
+.picture-content {
+  padding: 30px;
+  background-color: white;
+}
+
 .picture_form li {
   list-style: none;
   padding: 15px;
@@ -12,4 +17,12 @@
 .picture_form {
   width: 300px;
   margin: 0 auto;
+}
+
+.pictures_index {
+  padding: 50px;
+}
+
+.each_picture {
+  margin-top: 80px;
 }

@@ -7,7 +7,6 @@
     <% end %>
     </ul>
   <% end %>
-
   <%= image_tag @picture.image.url if @picture.image && @picture.image.url %>
   <ul class="picture_form">
     <li>
@@ -21,5 +20,4 @@
     </li>
   </ul>
   <%= f.submit '投稿' %>
-
 <% end %>
